@@ -32,6 +32,8 @@ Route::post('/register/user', [RegisterController::class, 'registerUser'])->name
 
 // Admin Routes
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
+Route::post('admin/delete', [AdminController::class, 'delete'])->name('delete');
 
 // Seller Routes
 Route::get('/seller-dashboard', [SellerController::class, 'index'])->name('seller.dashboard');
+
