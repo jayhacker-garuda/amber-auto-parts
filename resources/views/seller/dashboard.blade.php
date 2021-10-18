@@ -1,5 +1,5 @@
-@extends('layouts.default')
+@extends('layouts.sellerDefault')
 
-@section('content')
-    
+@section('seller-dashboard')
+Seller
 @endsection

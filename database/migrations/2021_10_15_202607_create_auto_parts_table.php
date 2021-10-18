@@ -15,7 +15,8 @@ class CreateAutoPartsTable extends Migration
     {
         Schema::create('auto_parts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->unsignedInteger('user_id');
+            $table->string('item_name');
             $table->unsignedBigInteger('model_id');
             $table->unsignedBigInteger('category_id');
             $table->integer('price');

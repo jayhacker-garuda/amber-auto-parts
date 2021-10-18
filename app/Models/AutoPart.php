@@ -10,7 +10,8 @@ class AutoPart extends Model
     use HasFactory;
 
     protected $fillable = [
-      'name',
+      'user_id',
+      'item_name',
       'model_id',
       'category_id',
       'price',

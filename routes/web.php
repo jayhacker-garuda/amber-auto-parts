@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Main\MainController;
 use App\Http\Controllers\Seller\SellerController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +32,14 @@ Route::post('/register/user', [RegisterController::class, 'registerUser'])->name
 
 
 // Admin Routes
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin-dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 
 // Seller Routes
 Route::get('/seller-dashboard', [SellerController::class, 'index'])->name('seller.dashboard');
+
+// User Routes
+Route::get('/user-dashboard', [UserController::class, 'index'])->name('user.dashboard');
+Route::get('/user-dashboard/auto-parts', [UserController::class, 'fetchAutoData']);
+Route::get('/search-make/{make}', [UserController::class, 'make']);
+// Route::post('/search-model', [UserController::class], 'model');
+// Route::post('/search-year', [UserController::class], 'year');
